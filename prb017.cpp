@@ -1,3 +1,15 @@
+/*
+Number letter counts
+Problem 17
+
+If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+
+If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
+
+NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+
+*/
+
 #include<iostream>
 #include<cstring>
 using namespace std;
@@ -14,7 +26,7 @@ int main()
 		a=j;
 		if(a>100)
 			flag=1;
-		else 
+		else
 			flag=0;
 		temp=a/1000;
 		if(temp>0)
@@ -23,7 +35,7 @@ int main()
 			strcat(s,"Thousand ");
 		}
 		a=a%1000;
-	
+
 		temp=a/100;
 		if(temp>0)
 		{
@@ -31,7 +43,7 @@ int main()
 			strcat(s,"Hundred ");
 		}
 		a=a%100;
-		
+
 		if(a<20 && a>9)
 		{
 			if(strlen(s)!=0)
@@ -53,7 +65,7 @@ int main()
 				case 14:
 					strcat(s,"Fourteen ");
 					break;
-				case 15:	
+				case 15:
 					strcat(s,"Fifteen ");
 					break;
 				case 16:
@@ -69,7 +81,7 @@ int main()
 					strcat(s,"Nineteen ");
 					break;
 			}
-		}	
+		}
 		else
 		{
 			temp=a/10;
@@ -93,7 +105,7 @@ int main()
 						break;
 					case 5:
 						strcat(s,"Fifty ");
-						break;	
+						break;
 					case 6:
 						strcat(s,"Sixty ");
 						break;

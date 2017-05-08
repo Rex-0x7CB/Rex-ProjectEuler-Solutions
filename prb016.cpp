@@ -1,3 +1,13 @@
+/*
+Power digit sum
+Problem 16
+
+2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+What is the sum of the digits of the number 2^1000?
+
+*/
+
 #include<iostream>
 #include<cstdio>
 #include<cstring>
@@ -45,7 +55,7 @@ void multiply(char* res,char* input,int a)
 		res[k++]=(char)( (temp%10) + 48 );
 		carry=temp/10;
 	}
-	
+
 	while(carry>0)
 	{
 		res[k++]=(char)( carry%10 + 48 );
